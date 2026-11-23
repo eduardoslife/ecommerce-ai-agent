@@ -1,7 +1,7 @@
 # Roadmap
 
 ## Done
-- [x] PRD with goals, non-goals, risk register, eval plan and success metrics
+- [x] PRD with goals, risks, evaluation plan and success metrics
 - [x] Google Sheets ledger: Inventory, Sales, Expenses, Mileage, Tax Summary
 - [x] Jan–Nov 2026 sales imported (85 orders), reconciled to eBay's Financial Summary
 - [x] Live business dashboard on top of the ledger
@@ -19,12 +19,12 @@
 - [ ] Lister agent: draft listings through the Sell Inventory API, publish only after approval
 
 ## Then: evaluation and launch gate
-- [ ] Build a 50-item test set from past inventory with known outcomes, including at least 5 fakes, repros or replaced-part items
-- [ ] Run the agent blind (photo and asking price only) and score identification, authenticity flags, price error and listing edits
-- [ ] Launch gate: 90%+ identification accuracy and every known fake flagged
-- [ ] Measure baselines (minutes from photo to decision, purchase to live listing) before launch
+- [ ] Build an evaluation set from past inventory with known outcomes
+- [ ] Run the agent blind and score it
+- [ ] Pass the launch gate before going live
+- [ ] Measure baselines before launch
 
 ## After launch
-- [ ] Monthly email report on the 1st: revenue, net profit, margin, top and bottom flips, aging stock to mark down, agent stats
+- [ ] Monthly email report
 - [ ] Agent performance panel on the dashboard
-- [ ] Weekly review of misses, added back into the test set
+- [ ] Ongoing review of misses
