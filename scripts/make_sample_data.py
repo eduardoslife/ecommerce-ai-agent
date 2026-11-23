@@ -60,7 +60,7 @@ def main() -> None:
                "cost": cost, "status": "in_stock", "listed_date": "", "list_price": ""}
         if i < 26:  # sold
             listed = bought + timedelta(days=rng.randint(1, 6))
-            sold = listed + timedelta(days=rng.randint(2, 45))
+            sold = min(listed + timedelta(days=rng.randint(2, 45)), date(2026, 11, 20))
             price = round(sale * rng.uniform(0.85, 1.15), 2)
             ship_chg = rng.choice([0.0, 0.0, 12.99, 18.50])
             ship_cost = round(rng.uniform(9, 24), 2)
