@@ -108,7 +108,7 @@ def main() -> None:
               "Item subtotal", "Shipping and handling", "Final Value Fee - fixed",
               "Final Value Fee - variable", "Gross transaction amount", "Net amount"]
     report_lines.append({"Transaction creation date": "2026-11-01", "Type": "Payout", "Net amount": -999.0})
-    with (OUT / "ebay_transaction_report_sample.csv").open("w", newline="") as f:
+    with (OUT / "marketplace_transaction_report_sample.csv").open("w", newline="") as f:
         f.write("Transaction report (synthetic sample)\nPeriod: 2026-06-01 to 2026-11-20\n\n")
         w = csv.DictWriter(f, fieldnames=header)
         w.writeheader()

@@ -70,7 +70,7 @@ def test_thin_margin_is_pass_with_offer():
 # ---- import and reconcile ---------------------------------------------------
 
 def test_sample_report_reconciles_with_ledger():
-    res = importers.import_file(SAMPLE / "ebay_transaction_report_sample.csv")
+    res = importers.import_file(SAMPLE / "marketplace_transaction_report_sample.csv")
     ledger = CsvLedger(SAMPLE)
     assert len(res.sales) == len(ledger.read("Sales"))
     rec = importers.reconcile(res, summary_total=res.report_net_total)
@@ -79,7 +79,7 @@ def test_sample_report_reconciles_with_ledger():
 
 
 def test_reconcile_flags_mismatch():
-    res = importers.import_file(SAMPLE / "ebay_transaction_report_sample.csv")
+    res = importers.import_file(SAMPLE / "marketplace_transaction_report_sample.csv")
     assert not importers.reconcile(res, summary_total=res.report_net_total + 5)["reconciled"]
 
 

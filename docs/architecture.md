@@ -25,7 +25,7 @@ flowchart TB
       Q[(pending.json)]
     end
     ANT[Anthropic API<br/>Claude vision]
-    EB[eBay APIs<br/>planned]
+    EB[Marketplace APIs<br/>planned]
 
     CD --> RT & PT
     RT --> RP & V
@@ -55,6 +55,6 @@ flowchart TB
 **Pricing is pure.** Fees, comp statistics, profit and max buy price are pure functions with configurable fee assumptions, unit-tested in isolation.
 
 ## Known limits (v0.1)
-- eBay restricts access to sold-price history, so v1 uses active listings plus the business's own sales records once the API is connected. Until then, comps are entered by hand.
+- The marketplace restricts access to sold-price history, so v1 uses active listings plus the business's own sales records once the API is connected. Until then, comps are entered by hand.
 - The public authenticity checklists are generic starters. Production checklists are brand-specific and kept out of the repo.
 - The fee model uses configurable defaults. Check your own category's rates.

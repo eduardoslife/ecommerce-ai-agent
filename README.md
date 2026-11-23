@@ -4,7 +4,9 @@ A multi-agent AI workflow and MCP server that runs the back office of a small e-
 
 One product photo goes in. A **buy/pass verdict**, an **authenticity risk score** and, once approved, a **ledger entry and marketplace listing** come out. A person approves every purchase and every listing before anything is written or published.
 
-> **Status:** v0.1. The ledger, reports, import and reconciliation, approval gate, photo-to-verdict agent and MCP server all work today on a demo ledger. Live eBay integration (Browse and Sell APIs) is next, waiting on developer account approval. See [ROADMAP.md](ROADMAP.md).
+**[Try the interactive demo dashboard →](https://claude.ai/artifact/NPbB5e2PjgggNL3raX9Sn9)** Filter by category or month, and test the agent's buy/pass pricing logic yourself. Sample data only.
+
+> **Status:** v0.1. The ledger, reports, import and reconciliation, approval gate, photo-to-verdict agent and MCP server all work today on a demo ledger. Live marketplace integration (listing and pricing APIs) is next, waiting on developer account approval. See [ROADMAP.md](ROADMAP.md).
 
 ---
 
@@ -30,7 +32,7 @@ flowchart LR
     V --> G1[[Owner approves buy]]
     G1 --> L[(Google Sheets ledger)]
     L --> G2[[Owner approves listing]]
-    G2 --> E[eBay listing<br/>coming next]
+    G2 --> E[Marketplace listing<br/>coming next]
     E --> S[Daily sales sync] --> L
     L --> D[Dashboard + monthly email report]
 ```
@@ -41,7 +43,7 @@ flowchart LR
 | Identifier | Brand, model, variant, visible condition; one observation per authenticity check | Claude vision with a forced structured-output tool |
 | Authenticity checker | 0–100 risk score with reasons and the close-ups that would settle it | Weighted per-category checklists. The repo ships generic starters. Brand-specific checklists stay private in `data/private/` (git-ignored) |
 | Pricer | Expected sale price, profit after fees and shipping, max buy price | `pricing.py` (pure, unit-tested) |
-| Lister | Title, item specifics, description, price | Next milestone (eBay Sell Inventory API) |
+| Lister | Title, item specifics, description, price | Next milestone (marketplace listing API) |
 
 ### Safeguards
 
@@ -56,7 +58,7 @@ The biggest risk is a confident wrong answer: a missed fake, or a made-up spec i
 
 ## Reporting beyond the marketplace's own
 
-eBay's reports show sales and fees. They don't know what you paid for an item, where you bought it, or what you spent on supplies and mileage. The ledger joins all of that:
+Marketplace reports show sales and fees. They don't know what you paid for an item, where you bought it, or what you spent on supplies and mileage. The ledger joins all of that:
 
 | Report | Question it answers |
 |---|---|
@@ -66,7 +68,7 @@ eBay's reports show sales and fees. They don't know what you paid for an item, w
 | Inventory aging | How much cash sits in unsold stock at 30, 60 and 90+ days? |
 | Monthly summary | Revenue, gross and net profit after expenses and mileage |
 
-The real ledger covers January to November 2026: 85 orders, reconciled to eBay's Financial Summary.
+The real ledger covers January to November 2026: 85 orders, reconciled to the marketplace's financial records.
 
 ## Quick start (demo data, no API keys needed)
 
@@ -77,7 +79,7 @@ pip install -e ".[dev]"
 pytest                                   # 14 tests
 
 # Import a marketplace transaction report and reconcile it
-ecom-agent import data/sample/ebay_transaction_report_sample.csv
+ecom-agent import data/sample/marketplace_transaction_report_sample.csv
 
 # Business reports
 ecom-agent report month 2026-10
@@ -131,7 +133,7 @@ src/ecom_agent/
   agent/verdict.py        coordinator, identifier (Claude vision), CLI
   agent/authenticity.py   checklist-based risk scoring
   pricing.py              fees, comps, profit, max buy price
-  importers.py            eBay transaction report import + reconciliation
+  importers.py            marketplace transaction report import + reconciliation
   approvals.py            human approval gate + audit log
   ledger/                 schema, CSV and Google Sheets backends, reports
   mcp_server.py           MCP server (read tools + propose-only write tools)

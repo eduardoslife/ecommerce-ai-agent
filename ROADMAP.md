@@ -3,7 +3,7 @@
 ## Done
 - [x] PRD with goals, risks, evaluation plan and success metrics
 - [x] Google Sheets ledger: Inventory, Sales, Expenses, Mileage, Tax Summary
-- [x] Jan–Nov 2026 sales imported (85 orders), reconciled to eBay's Financial Summary
+- [x] Jan–Nov 2026 sales imported (85 orders), reconciled to the marketplace's financial records
 - [x] Live business dashboard on top of the ledger
 - [x] Transaction report importer with automatic reconciliation
 - [x] Reports: true profit per item, return by category, sourcing channels, inventory aging, monthly net profit
@@ -11,7 +11,7 @@
 - [x] MCP server with read tools and propose-only write tools
 - [x] Human approval gate and audit log
 
-## Next: eBay integration (waiting on developer account approval)
+## Next: marketplace integration (waiting on developer account approval)
 - [ ] Sandbox OAuth flow, tokens kept in a secrets store
 - [ ] Connect the seller account with read-only scopes first
 - [ ] Pricer pulls comps from the Browse API instead of manual input
