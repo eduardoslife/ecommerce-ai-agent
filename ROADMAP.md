@@ -3,7 +3,7 @@
 ## Done
 - [x] PRD with goals, risks, evaluation plan and success metrics
 - [x] Google Sheets ledger: Inventory, Sales, Expenses, Mileage, Tax Summary
-- [x] Jan–Nov 2026 sales imported (85 orders), reconciled to the marketplace's financial records
+- [x] Jan–Nov 2026 sales imported (85 orders), reconciled to e-commerce financial records
 - [x] Live business dashboard on top of the ledger
 - [x] Transaction report importer with automatic reconciliation
 - [x] Reports: true profit per item, return by category, sourcing channels, inventory aging, monthly net profit

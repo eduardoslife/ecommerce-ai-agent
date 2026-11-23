@@ -68,7 +68,7 @@ Marketplace reports show sales and fees. They don't know what you paid for an it
 | Inventory aging | How much cash sits in unsold stock at 30, 60 and 90+ days? |
 | Monthly summary | Revenue, gross and net profit after expenses and mileage |
 
-The real ledger covers January to November 2026: 85 orders, reconciled to the marketplace's financial records.
+The real ledger covers January to November 2026: 85 orders, reconciled to e-commerce financial records.
 
 ## Quick start (demo data, no API keys needed)
 
