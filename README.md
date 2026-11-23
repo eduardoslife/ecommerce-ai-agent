@@ -12,7 +12,7 @@ One product photo goes in. A **buy/pass verdict**, an **authenticity risk score*
 
 Every item the business sells used to take the same manual steps: identify the model, check comps, judge authenticity, write the listing, log the cost for taxes. Each step was slow and inconsistent, and a missed fake or an overpriced buy cost real margin. Cost records lived in scattered places.
 
-The goal was to cut that manual time while keeping a human in control of every action that spends money or touches the seller account. I ran it like a program: a PRD, a risk register, an evaluation plan with a launch gate, and milestones. The [product requirements summary](docs/product-requirements.md) covers that.
+The goal was to cut that manual time while keeping a human in control of every action that spends money or touches the seller account. I ran it like a program: a PRD, a risk register, an evaluation plan with a launch gate, and milestones. See the [product requirements overview](docs/product-requirements.md). The full PRD is available on request.
 
 ## How it works
 
@@ -39,7 +39,7 @@ flowchart LR
 |---|---|---|
 | Coordinator | Routes work, asks for more photos when unsure, assembles the verdict | `agent/verdict.py` → `decide()` |
 | Identifier | Brand, model, variant, visible condition; one observation per authenticity check | Claude vision with a forced structured-output tool |
-| Authenticity checker | 0–100 risk score with reasons and the close-ups that would settle it | Weighted per-category checklists in `data/checklists/` |
+| Authenticity checker | 0–100 risk score with reasons and the close-ups that would settle it | Weighted per-category checklists. The repo ships generic starters. Brand-specific checklists stay private in `data/private/` (git-ignored) |
 | Pricer | Expected sale price, profit after fees and shipping, max buy price | `pricing.py` (pure, unit-tested) |
 | Lister | Title, item specifics, description, price | Next milestone (eBay Sell Inventory API) |
 
@@ -74,7 +74,7 @@ The real ledger covers January to November 2026: 85 orders, reconciled to eBay's
 git clone https://github.com/eduardoslife/ecommerce-ai-agent
 cd ecommerce-ai-agent
 pip install -e ".[dev]"
-pytest                                   # 13 tests
+pytest                                   # 14 tests
 
 # Import a marketplace transaction report and reconcile it
 ecom-agent import data/sample/ebay_transaction_report_sample.csv
@@ -136,9 +136,10 @@ src/ecom_agent/
   ledger/                 schema, CSV and Google Sheets backends, reports
   mcp_server.py           MCP server (read tools + propose-only write tools)
   cli.py                  ecom-agent command
-data/checklists/          authenticity checklists per category
+data/checklists/          generic starter authenticity checklists
+data/private/             real checklists (git-ignored, not in this repo)
 data/sample/              synthetic demo ledger (all numbers made up)
-docs/                     architecture, product requirements
+docs/                     architecture, product requirements overview
 tests/                    unit tests
 ```
 

@@ -56,5 +56,5 @@ flowchart TB
 
 ## Known limits (v0.1)
 - eBay restricts access to sold-price history, so v1 uses active listings plus the business's own sales records once the API is connected. Until then, comps are entered by hand.
-- Authenticity checklists are starters and will grow per brand as the eval set grows.
+- The public authenticity checklists are generic starters. Production checklists are brand-specific and kept out of the repo.
 - The fee model uses configurable defaults. Check your own category's rates.

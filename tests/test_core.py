@@ -113,3 +113,13 @@ def test_proposals_do_not_write_until_approved(tmp_path):
 def test_invalid_proposal_is_rejected(tmp_path):
     with pytest.raises(ValueError):
         approvals.propose(CsvLedger(tmp_path), "log_expense", {"date": "x"}, queue=tmp_path / "q.json")
+
+
+def test_private_checklists_override_public(tmp_path, monkeypatch):
+    import json
+    from ecom_agent.agent import authenticity
+    private = tmp_path / "checklists.json"
+    private.write_text(json.dumps({"camera": [{"id": "secret_check", "check": "x", "weight": 1}],
+                                   "other_electronics": []}))
+    monkeypatch.setenv("CHECKLISTS_PATH", str(private))
+    assert [c["id"] for c in authenticity.load_checklist("camera")] == ["secret_check"]

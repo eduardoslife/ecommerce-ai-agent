@@ -9,14 +9,26 @@ looks and what close-ups would settle it.
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
-CHECKLISTS = Path(__file__).resolve().parents[3] / "data" / "checklists" / "checklists.json"
+_DATA = Path(__file__).resolve().parents[3] / "data"
+# The public repo ships generic starter checklists. Real, brand-specific
+# checklists live in data/private/ (git-ignored) or wherever
+# CHECKLISTS_PATH points, and are used automatically when present.
+PUBLIC_CHECKLISTS = _DATA / "checklists" / "checklists.json"
+PRIVATE_CHECKLISTS = _DATA / "private" / "checklists.json"
 RESULT_WEIGHT = {"pass": 0.0, "unclear": 0.5, "concern": 1.0}
 
 
+def checklists_path() -> Path:
+    if os.getenv("CHECKLISTS_PATH"):
+        return Path(os.environ["CHECKLISTS_PATH"]).expanduser()
+    return PRIVATE_CHECKLISTS if PRIVATE_CHECKLISTS.exists() else PUBLIC_CHECKLISTS
+
+
 def load_checklist(category: str) -> list[dict]:
-    data = json.loads(CHECKLISTS.read_text())
+    data = json.loads(checklists_path().read_text())
     return data.get(category) or data["other_electronics"]
 
 

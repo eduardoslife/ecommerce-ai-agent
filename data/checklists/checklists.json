@@ -1,5 +1,5 @@
 {
-  "_note": "Starter checklists. Each check has a weight: how much a concern on it raises the risk score. Extend per brand as the eval set grows.",
+  "_note": "Generic starter checklists for the demo. Each check has a weight: how much a concern on it raises the risk score. Production checklists are brand-specific and kept private (data/private/checklists.json or CHECKLISTS_PATH).",
   "camera": [
     {"id": "serial_plate", "check": "Serial number plate or label present, intact and in the brand's usual position", "weight": 3},
     {"id": "print_quality", "check": "Logo, model name and dial markings are crisp, evenly printed and correctly spelled", "weight": 3},
