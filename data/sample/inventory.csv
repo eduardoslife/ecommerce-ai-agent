@@ -1,0 +1,37 @@
+sku,title,category,brand,source,purchase_date,cost,status,listed_date,list_price
+DEMO-0001,Marantz 2230 receiver,audio,Marantz,thrift store,2026-06-29,178,sold,2026-07-01,500.87
+DEMO-0002,Nikon FM2 body,camera,Nikon,estate sale,2026-09-17,129,sold,2026-09-19,389.43
+DEMO-0003,Nintendo GameCube console,other_electronics,Nintendo,garage sale,2026-10-18,55,sold,2026-10-23,153.44
+DEMO-0004,Nintendo GameCube console,other_electronics,Nintendo,Facebook Marketplace,2026-09-17,52,sold,2026-09-19,123.65
+DEMO-0005,Audio-Technica AT-LP120 turntable,audio,Audio-Technica,garage sale,2026-08-07,166,sold,2026-08-12,320.65
+DEMO-0006,Marantz 2230 receiver,audio,Marantz,estate sale,2026-09-01,247,sold,2026-09-02,515.75
+DEMO-0007,Nikon FM2 body,camera,Nikon,thrift store,2026-09-06,151,sold,2026-09-08,371.92
+DEMO-0008,Marantz 2230 receiver,audio,Marantz,Facebook Marketplace,2026-06-19,251,sold,2026-06-24,504.89
+DEMO-0009,Nintendo GameCube console,other_electronics,Nintendo,thrift store,2026-10-21,49,sold,2026-10-22,153.95
+DEMO-0010,Fujifilm X100V,camera,Fujifilm,thrift store,2026-10-24,1024,sold,2026-10-26,1457.67
+DEMO-0011,Fujifilm X100V,camera,Fujifilm,OfferUp,2026-10-22,873,sold,2026-10-26,1414.0
+DEMO-0012,Bose QuietComfort 45,audio,Bose,estate sale,2026-10-05,89,sold,2026-10-06,207.44
+DEMO-0013,Sony WH-1000XM4 headphones,audio,Sony,OfferUp,2026-09-28,106,sold,2026-09-29,218.79
+DEMO-0014,Nikon FM2 body,camera,Nikon,garage sale,2026-08-15,165,sold,2026-08-16,443.84
+DEMO-0015,Marantz 2230 receiver,audio,Marantz,OfferUp,2026-08-16,280,sold,2026-08-21,503.11
+DEMO-0016,Canon AE-1 Program 35mm film camera,camera,Canon,estate sale,2026-08-22,85,sold,2026-08-25,209.08
+DEMO-0017,Nikon FM2 body,camera,Nikon,OfferUp,2026-10-03,199,sold,2026-10-05,407.43
+DEMO-0018,Sony WH-1000XM4 headphones,audio,Sony,Facebook Marketplace,2026-07-25,128,sold,2026-07-31,198.98
+DEMO-0019,Sennheiser HD 600,audio,Sennheiser,estate sale,2026-07-01,132,sold,2026-07-04,321.49
+DEMO-0020,Nikon FM2 body,camera,Nikon,estate sale,2026-06-16,147,sold,2026-06-19,390.45
+DEMO-0021,Bose QuietComfort 45,audio,Bose,OfferUp,2026-07-04,127,sold,2026-07-09,184.4
+DEMO-0022,Nikon FM2 body,camera,Nikon,thrift store,2026-06-25,185,sold,2026-06-29,384.96
+DEMO-0023,Nikon FM2 body,camera,Nikon,thrift store,2026-06-16,162,sold,2026-06-17,352.83
+DEMO-0024,Sony a6000 kit,camera,Sony,estate sale,2026-09-27,181,sold,2026-10-01,360.89
+DEMO-0025,Olympus OM-1 with 50mm f/1.8,camera,Olympus,Facebook Marketplace,2026-09-13,104,sold,2026-09-17,233.12
+DEMO-0026,Apple iPad Air (4th gen),other_electronics,Apple,OfferUp,2026-09-25,185,sold,2026-10-01,319.49
+DEMO-0027,Audio-Technica AT-LP120 turntable,audio,Audio-Technica,thrift store,2026-10-17,110,listed,2026-10-18,286.0
+DEMO-0028,Canon AE-1 Program 35mm film camera,camera,Canon,OfferUp,2026-10-28,84,listed,2026-10-30,231.0
+DEMO-0029,Canon AE-1 Program 35mm film camera,camera,Canon,Facebook Marketplace,2026-10-09,67,listed,2026-10-10,231.0
+DEMO-0030,Audio-Technica AT-LP120 turntable,audio,Audio-Technica,Facebook Marketplace,2026-06-18,156,listed,2026-06-22,286.0
+DEMO-0031,Nikon FM2 body,camera,Nikon,OfferUp,2026-10-24,148,listed,2026-10-25,396.0
+DEMO-0032,Audio-Technica AT-LP120 turntable,audio,Audio-Technica,OfferUp,2026-06-21,136,in_stock,,
+DEMO-0033,Audio-Technica AT-LP120 turntable,audio,Audio-Technica,thrift store,2026-10-12,129,in_stock,,
+DEMO-0034,Fujifilm X100V,camera,Fujifilm,garage sale,2026-08-20,737,in_stock,,
+DEMO-0035,Olympus OM-1 with 50mm f/1.8,camera,Olympus,estate sale,2026-08-16,102,in_stock,,
+DEMO-0036,Canon AE-1 Program 35mm film camera,camera,Canon,OfferUp,2026-09-26,91,in_stock,,

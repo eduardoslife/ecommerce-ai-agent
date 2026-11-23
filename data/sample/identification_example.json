@@ -1,0 +1,40 @@
+{
+  "category": "camera",
+  "brand": "Nikon",
+  "model": "FM2",
+  "variant": "chrome body",
+  "condition": "Light brassing on top plate corners, no dents visible",
+  "identification_confidence": 0.92,
+  "observations": [
+    {
+      "id": "serial_plate",
+      "result": "pass",
+      "note": "Serial visible on top plate, consistent format"
+    },
+    {
+      "id": "print_quality",
+      "result": "pass",
+      "note": "Engravings crisp and even"
+    },
+    {
+      "id": "mount_condition",
+      "result": "pass",
+      "note": "Mount clean, normal wear"
+    },
+    {
+      "id": "lens_glass",
+      "result": "unclear",
+      "note": "Body only, no lens shown"
+    },
+    {
+      "id": "body_match",
+      "result": "pass",
+      "note": "Shutter dial and finder match FM2"
+    },
+    {
+      "id": "region_market",
+      "result": "pass",
+      "note": "Standard markings"
+    }
+  ]
+}
