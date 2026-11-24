@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Multi-agent AI workflow and MCP server for a small e-commerce resale business"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = { text = "Proprietary - all rights reserved" }
 dependencies = [
     "mcp>=2.0",
     "anthropic>=0.40",

@@ -151,4 +151,6 @@ Python · [Model Context Protocol](https://modelcontextprotocol.io) · Claude (A
 
 ## License
 
-MIT
+Copyright © 2026 eduardoslife. All rights reserved.
+
+This code is shared publicly for viewing and portfolio purposes only. It may not be copied, modified, or reused without written permission. See [LICENSE](LICENSE).
